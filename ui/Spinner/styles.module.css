@@ -1,0 +1,24 @@
+.wrap {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-self: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}

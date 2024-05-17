@@ -1,0 +1,58 @@
+:root {
+  --electric-50: rgb(251, 215, 67);
+  --fire-50: rgb(255, 31, 31);
+  --grass-50: rgb(115, 172, 49);
+  --normal-00: rgb(255, 255, 255);
+  --normal-10: rgb(225, 225, 225);
+  --normal-50: rgb(127, 127, 127);
+  --normal-90: rgb(42, 42, 42);
+  --normal-99: rgb(0, 0, 0);
+  --water-30: rgb(93, 185, 255);
+  --water-70: rgb(54, 59, 129);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --electric-50: rgb(251, 215, 67);
+    --fire-50: rgb(255, 31, 31);
+    --grass-50: rgb(115, 172, 49);
+    --normal-00: rgb(0, 0, 0);
+    --normal-10: rgb(42, 42, 42);
+    --normal-50: rgb(127, 127, 127);
+    --normal-90: rgb(225, 225, 225);
+    --normal-99: rgb(255, 255, 255);
+    --water-30: rgb(54, 59, 129);
+    --water-70: rgb(93, 185, 255);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--normal-00);
+  color: var(--normal-90);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

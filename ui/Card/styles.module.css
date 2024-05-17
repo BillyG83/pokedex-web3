@@ -1,0 +1,57 @@
+.card {
+  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+  padding: 30px;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  align-items: center;
+  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+
+.icon svg {
+  max-width: 20px;
+}
+
+.subTitle {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.subTitle p {
+  color: gray;
+  font-size: 14px;
+}
+
+.description {
+  display: block;
+}
+
+.description strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cta {
+  border-top: 1px solid var(--normal-50);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+}

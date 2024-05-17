@@ -1,0 +1,38 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 32px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.home {
+  display: block;
+  width: fit-content;
+}
+
+.home:hover {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: ballRocking;
+  display: block;
+  width: fit-content;
+}
+
+@keyframes ballRocking {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

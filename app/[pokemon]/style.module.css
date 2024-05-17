@@ -1,0 +1,11 @@
+.stat {
+  display: inline-block;
+}
+
+.stat + .stat {
+  margin-left: 4px;
+}
+
+.stat + .stat::before {
+  content: '/ ';
+}

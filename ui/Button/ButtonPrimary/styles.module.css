@@ -1,0 +1,5 @@
+.buttonPrimary {
+  background-color: var(--grass-50);
+  border: 1px solid var(--grass-50);
+  color: var(--normal-10);
+}
