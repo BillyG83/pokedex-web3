@@ -1,11 +1,31 @@
-.stat {
-  display: inline-block;
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-.stat + .stat {
-  margin-left: 4px;
+.card {
+  display: block;
 }
 
-.stat + .stat::before {
-  content: '/ ';
+.card button + a {
+  display: none;
+}
+
+.info {
+  display: block;
+  padding: 0 32px 32px;
+}
+
+.info p {
+  padding: 0 0 12px 0;
+}
+
+.info ul {
+  padding: 8px 32px 32px;
+}
+
+.info a {
+  margin-bottom: 12px;
 }
