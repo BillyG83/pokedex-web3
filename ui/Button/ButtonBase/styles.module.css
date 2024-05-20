@@ -4,10 +4,11 @@
   border-radius: 4px;
   cursor: pointer;
   display: flex;
-  gap: 12px;
   font-weight: 600;
+  gap: 12px;
   justify-content: center;
-  padding: 8px;
+  max-width: fit-content;
+  padding: 12px 24px;
   &:active {
     transform: 1px;
   }

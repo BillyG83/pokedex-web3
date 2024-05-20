@@ -1,5 +1,5 @@
 .buttonSecondary {
   background-color: var(--normal-10);
-  border: 1px solid var(--normal-99);
-  color: var(--normal-99);
+  border: 1px solid var(--normal-10);
+  color: var(--grass-80);
 }
