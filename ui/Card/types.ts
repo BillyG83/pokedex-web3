@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 export interface ICardProps {
+  children: ReactNode
   /**
    * call to action buttons or links
    */

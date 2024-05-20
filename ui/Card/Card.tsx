@@ -2,6 +2,7 @@ import { ICardProps } from './types'
 import styles from './styles.module.css'
 
 const Card = ({
+  children,
   cta,
   description,
   icon,
@@ -27,6 +28,7 @@ const Card = ({
           </span>
         )}
       </div>
+      {children && <div>{children}</div>}
       {image && <div>{image}</div>}
       {description && (
         <div className={styles.description}>
