@@ -1,11 +1,14 @@
 import { ReactNode } from 'react'
 
 export interface ICardProps {
+  /**
+   * render Next Image or other content on top of the card
+   */
   children: ReactNode
   /**
    * call to action buttons or links
    */
-  cta: ReactNode
+  cta?: ReactNode
   /**
    * a short descriptive text about this product or offering
    */
@@ -14,10 +17,6 @@ export interface ICardProps {
    * renders any icon in the heading of the card
    */
   icon?: ReactNode
-  /**
-   * renders an image in the body of the card
-   */
-  image?: ReactNode
   /**
    * subtitle must have text and can render any icon
    */
@@ -28,5 +27,5 @@ export interface ICardProps {
   /**
    * heading text of the card
    */
-  title: string
+  title?: string
 }

@@ -1,17 +1,28 @@
 .card {
-  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.05);
+  background-color: var(--normal-10);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 450px;
-  padding: 30px;
-  width: 100%;
+  max-width: 395px;
+  min-width: 320px;
+  overflow: hidden;
 }
 
 .heading {
   display: flex;
   gap: 12px;
   justify-content: space-between;
+  padding: 32px 32px 0;
+  width: 100%;
+}
+
+.heading h3 {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
   width: 100%;
 }
 
@@ -41,6 +52,15 @@
 
 .description {
   display: block;
+  padding: 0 32px;
+}
+
+.children {
+  background-color: var(--normal-50);
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  width: 100%;
 }
 
 .description strong {
@@ -49,9 +69,10 @@
 }
 
 .cta {
-  border-top: 1px solid var(--normal-50);
+  align-items: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 12px;
-  padding-top: 20px;
+  justify-content: center;
+  padding: 32px;
 }
