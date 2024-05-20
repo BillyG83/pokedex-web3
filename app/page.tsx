@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import styles from './page.module.css'
 import { TPokemon } from '@/types'
+import { PokemonCard } from './components'
+import styles from './page.module.css'
 
 async function getData() {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
@@ -18,9 +18,11 @@ export default async function Page() {
     <nav className={styles.main}>
       <ul>
         {results.map((pokemon: TPokemon) => (
-          <li key={pokemon.url}>
-            <Link href={pokemon.name}>{pokemon.name}</Link>
-          </li>
+          <PokemonCard
+            key={pokemon.url}
+            name={pokemon.name}
+            url={pokemon.url}
+          />
         ))}
       </ul>
     </nav>
