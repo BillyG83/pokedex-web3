@@ -5,8 +5,9 @@ import Image from 'next/image'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useAccount } from 'wagmi'
 import { useInitUser } from '@/app/hooks'
-import styles from './styles.module.css'
+import { ERoute } from '@/const'
 import { useUserStore } from '@/store'
+import styles from './styles.module.css'
 
 const Header = () => {
   const { address } = useAccount()
@@ -23,7 +24,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Link href={'/'} className={styles.home}>
+      <Link href={ERoute.HOME} className={styles.home}>
         <Image alt="link home" height={40} src="/pokeball.png" width={40} />
       </Link>
       <ConnectButton />
