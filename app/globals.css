@@ -54,6 +54,16 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
 a {
   color: inherit;
   text-decoration: none;
