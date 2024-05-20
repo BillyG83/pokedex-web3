@@ -9,6 +9,7 @@ import { ICollectButton } from './types'
 const CollectButton = ({ pokemonId }: ICollectButton) => {
   const { user } = useUserStore()
   const [hasCollected, setHasCollected] = useState(false)
+  const [isFetching, setIsFetching] = useState(false)
 
   useEffect(() => {
     const getDexData = async () => {
@@ -24,6 +25,7 @@ const CollectButton = ({ pokemonId }: ICollectButton) => {
 
   const handleClick = async () => {
     if (!user.storageAddress || !user.trainer) return
+    setIsFetching(true)
     try {
       const usersDex = pokedex(user?.storageAddress)
       await usersDex.methods.collect(pokemonId).send({ from: user.trainer })
@@ -31,11 +33,16 @@ const CollectButton = ({ pokemonId }: ICollectButton) => {
     } catch (error) {
       console.error(error)
     }
+    setIsFetching(false)
   }
 
   if (!user.trainer) return <ConnectButton />
   return (
-    <ButtonPrimary onClick={handleClick} disabled={hasCollected}>
+    <ButtonPrimary
+      disabled={hasCollected}
+      isLoading={isFetching}
+      onClick={handleClick}
+    >
       {hasCollected ? 'Got it!' : 'Collect'}
     </ButtonPrimary>
   )
