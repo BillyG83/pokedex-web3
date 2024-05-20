@@ -1,3 +1,5 @@
 export * from './collectButton'
 export * from './header'
+export * from './pagination'
 export * from './pokemonCard'
+export * from './pokemonInfo'
