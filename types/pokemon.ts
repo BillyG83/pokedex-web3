@@ -1,4 +1,4 @@
-export type PokemonSubset = {
+export type TPokemonSubset = {
   abilities: {
     ability: {
       name: string

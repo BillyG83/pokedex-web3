@@ -1,8 +1,11 @@
+import Link from 'next/link'
 import Image from 'next/image'
+import clsx from 'clsx'
+import { TPokemonSubset } from '@/types'
+import { CollectButton } from '../components'
 import styles from '../page.module.css'
 import style from './style.module.css'
-import { PokemonSubset } from '@/types'
-import { CollectButton } from '../components'
+import { buttonBaseStyles, buttonSecondaryStyles } from '@/ui'
 
 async function getData(pokemon: string) {
   try {
@@ -17,7 +20,7 @@ async function getData(pokemon: string) {
 }
 
 const Pokemon = async ({ params }: { params: { pokemon: string } }) => {
-  const res: PokemonSubset = await getData(params.pokemon)
+  const res: TPokemonSubset = await getData(params.pokemon)
 
   return (
     <section className={styles.main}>
@@ -51,6 +54,16 @@ const Pokemon = async ({ params }: { params: { pokemon: string } }) => {
           ))}
         </ul>
         <CollectButton pokemonId={String(res.id)} />
+        <Link
+          className={clsx(
+            buttonBaseStyles.buttonBase,
+            buttonSecondaryStyles.buttonSecondary
+          )}
+          href={`https://bulbapedia.bulbagarden.net/wiki/${params.pokemon}`}
+          target="_blank"
+        >
+          Wiki
+        </Link>
       </div>
     </section>
   )
