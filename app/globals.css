@@ -1,28 +1,36 @@
 :root {
-  --electric-50: rgb(251, 215, 67);
-  --fire-50: rgb(255, 31, 31);
+  --electric-40: rgb(182, 234, 92);
+  --electric-60: rgb(229, 206, 56);
+  --fire-50: rgb(221, 96, 60);
+  --ghost-50: rgb(145, 103, 228);
+  --grass-20: rgb(47, 228, 171);
   --grass-50: rgb(115, 172, 49);
+  --grass-80: rgb(22, 150, 142);
   --normal-00: rgb(255, 255, 255);
-  --normal-10: rgb(225, 225, 225);
-  --normal-50: rgb(127, 127, 127);
-  --normal-90: rgb(42, 42, 42);
+  --normal-10: rgb(217, 236, 243);
+  --normal-50: rgb(157, 189, 200);
+  --normal-90: rgb(9, 16, 17);
   --normal-99: rgb(0, 0, 0);
-  --water-30: rgb(93, 185, 255);
+  --water-30: rgb(60, 210, 221);
   --water-70: rgb(54, 59, 129);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --electric-50: rgb(251, 215, 67);
-    --fire-50: rgb(255, 31, 31);
+    --electric-60: rgb(182, 234, 92);
+    --electric-40: rgb(229, 206, 56);
+    --fire-50: rgb(221, 96, 60);
+    --ghost-50: rgb(145, 103, 228);
+    --grass-80: rgb(47, 228, 171);
     --grass-50: rgb(115, 172, 49);
-    --normal-00: rgb(0, 0, 0);
-    --normal-10: rgb(42, 42, 42);
-    --normal-50: rgb(127, 127, 127);
-    --normal-90: rgb(225, 225, 225);
+    --grass-20: rgb(22, 150, 142);
     --normal-99: rgb(255, 255, 255);
+    --normal-90: rgb(217, 236, 243);
+    --normal-50: rgb(157, 189, 200);
+    --normal-10: rgb(9, 16, 17);
+    --normal-00: rgb(0, 0, 0);
+    --water-70: rgb(60, 210, 221);
     --water-30: rgb(54, 59, 129);
-    --water-70: rgb(93, 185, 255);
   }
 }
 
