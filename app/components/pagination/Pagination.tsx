@@ -12,6 +12,7 @@ const Pagination = ({ id }: IPaginationProps) => {
   return (
     <nav className={styles.wrap}>
       <Link
+        aria-disabled={id <= 1}
         className={clsx(
           buttonBaseStyles.buttonBase,
           buttonSecondaryStyles.buttonSecondary
@@ -22,6 +23,7 @@ const Pagination = ({ id }: IPaginationProps) => {
       </Link>
 
       <Link
+        aria-disabled={id >= 151}
         className={clsx(
           buttonBaseStyles.buttonBase,
           buttonPrimaryStyles.buttonPrimary
