@@ -8,6 +8,7 @@ import { useInitUser } from '@/app/hooks'
 import { ERoute } from '@/const'
 import { useUserStore } from '@/store'
 import styles from './styles.module.css'
+import { Search } from '../search'
 
 const Header = () => {
   const { address } = useAccount()
@@ -28,6 +29,7 @@ const Header = () => {
         <Image alt="link home" height={40} src="/pokeball.png" width={40} />
       </Link>
       <ConnectButton />
+      <Search />
     </header>
   )
 }
