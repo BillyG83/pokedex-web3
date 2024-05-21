@@ -5,11 +5,6 @@ import styles from './styles.module.css'
 const Input = ({ children, ...props }: TInputProps) => {
   return (
     <>
-      <input
-        {...props}
-        className={clsx(styles.input)}
-        type={props.type || 'text'}
-      />
       {props.label && (
         <label
           className={styles.label}
@@ -19,6 +14,12 @@ const Input = ({ children, ...props }: TInputProps) => {
           {props.label}
         </label>
       )}
+      <input
+        {...props}
+        className={clsx(styles.input)}
+        disabled={props.disabled || props.isLoading}
+        type={props.type || 'text'}
+      />
     </>
   )
 }

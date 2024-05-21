@@ -4,7 +4,7 @@ type BaseInputProps = InputHTMLAttributes<HTMLInputElement>
 
 interface AdditionalInputProps {
   id: string
-  loading?: boolean
+  isLoading?: boolean
   label?: string
 }
 
