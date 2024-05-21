@@ -4,7 +4,7 @@ import { PokemonCard } from './components'
 import styles from './page.module.css'
 
 export default async function Page() {
-  const pokemonList = await getAllPokemonData()
+  const pokemonList: TPokemonSubset[] = await getAllPokemonData()
   return (
     <nav className={styles.main}>
       <ul className={styles.collection}>
