@@ -1,0 +1,12 @@
+.list {
+  list-style: none;
+  max-height: 70vh;
+  overflow-x: auto;
+  padding: 12px 32px;
+}
+
+.list a {
+  color: var(--grass-80);
+  display: block;
+  padding: 4px 8px;
+}

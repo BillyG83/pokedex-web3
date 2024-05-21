@@ -5,6 +5,7 @@ import { getAllPokemonData } from '@/lib/pokemon'
 import { TPokemonSubset } from '@/types'
 import { ButtonBase, ButtonSecondary, Input } from '@/ui'
 import styles from './styles.module.css'
+import { Results } from './elements'
 
 const Search = () => {
   const [collection, setCollection] = useState<TPokemonSubset[]>([])
@@ -33,7 +34,11 @@ const Search = () => {
     <>
       <ButtonSecondary onClick={handleToggle}>Search &#x1F50D;</ButtonSecondary>
       {isOpen && (
-        <div className={styles.overlay}>
+        <div
+          aria-label="Search for a Pokemon"
+          className={styles.overlay}
+          role="dialog"
+        >
           <ButtonBase className={styles.close} onClick={handleToggle}>
             &times;
           </ButtonBase>
@@ -45,15 +50,7 @@ const Search = () => {
               type="search"
             />
             {collection.length > 0 && (
-              <ul className={styles.list}>
-                {collection.map((pokemon) => (
-                  <li key={pokemon.id}>
-                    <Link onClick={handleToggle} href={pokemon.name}>
-                      {pokemon.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <Results collection={collection} handleClose={handleToggle} />
             )}
           </div>
         </div>
