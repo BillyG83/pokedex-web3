@@ -10,15 +10,17 @@
   justify-content: center;
   max-width: fit-content;
   padding: 12px 24px;
-  &:active {
-    transform: 1px;
-  }
-  &:disabled,
-  &[data-loading='true'] {
-    cursor: default;
-    filter: grayscale(0.7);
-    opacity: 0.7;
-    pointer-events: none;
-    touch-action: none;
-  }
+}
+
+.buttonBase:active {
+  transform: 1px;
+}
+.buttonBase:disabled,
+.buttonBase[aria-disabled='true'],
+.buttonBase[data-loading='true'] {
+  cursor: default;
+  filter: grayscale(0.7);
+  opacity: 0.7;
+  pointer-events: none;
+  touch-action: none;
 }
