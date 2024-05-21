@@ -22,24 +22,27 @@ const Pokemon = async ({ params }: { params: { pokemon: string } }) => {
   return (
     <section className={styles.main}>
       <h1>
-        Web3 Pokedex: #{res.id}, <span className="cap">{res.name}</span>
+        Web3 Pokedex: #{res?.id || '0'},{' '}
+        <span className="cap">{res?.name || 'Unknown'}</span>
       </h1>
 
       <div className={style.wrap}>
         <div className={style.card}>
           <PokemonCard {...res}>
-            <Image
-              alt={params.pokemon}
-              height={150}
-              src={res.sprites.front_default}
-              width={150}
-            />
+            {res?.sprites?.front_default && (
+              <Image
+                alt={params.pokemon}
+                height={150}
+                src={res.sprites.front_default}
+                width={150}
+              />
+            )}
           </PokemonCard>
         </div>
 
         <div className={style.info}>
           <PokemonInfo {...res} />
-          <Pagination id={Number(res.id)} />
+          <Pagination id={Number(res?.id || 1)} />
         </div>
       </div>
     </section>
